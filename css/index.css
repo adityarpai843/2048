@@ -1,7 +1,16 @@
-body{
-    background-color: antiquewhite;
+
+
+/*Colours used throughout Game*/
+:root{
+    --page-background : antiquewhite;
+    --game-board-background : rgb(165, 129, 82);
+    --game-board-value-background : rgb(210, 183, 149);
+    --game-board-value-text-colour: rgb(245, 243, 241)
 }
 
+body{
+    background-color: var(--page-background);
+}
 
 /* Game container holds whole board. 
    Created a flex box with its content moved to newline
@@ -15,7 +24,7 @@ body{
     width: 500px;
     height: 500px;
     margin: 0 auto;
-    background-color: rgb(165, 129, 82);
+    background-color: var(--game-board-background);
 }
 
 .game-container div{
@@ -23,16 +32,16 @@ body{
     height: 100px;
     line-height: 100px;
     border: 2px solid rgb(220, 184, 140);
-    background-color: rgb(210, 183, 149);
+    background-color: var(--game-board-value-background);
     font-size: xx-large;
     text-align: center;
-    color: rgb(245, 243, 241);
+    color:var(--game-board-value-text-colour);
     font-weight: bold;
 
 }
 
 .game-container #game-status-container{
-    background-color: rgb(165, 129, 82);
+    background-color: var(--game-board-background);
     display: none;
     width: 500px;
     font-weight: bold;
@@ -42,19 +51,19 @@ body{
 }
 
 .game-header{
-    color: rgb(165, 129, 82);
+    color:var(--game-board-background);
     font-size: 50px;
     margin-top: 0px;
     text-align: center;
 }
 
 .score{
-    color: rgb(245, 243, 241);
+    color: var(--game-board-value-text-colour);
 }
 
 .score-container{
-    background-color: rgb(165, 129, 82);
-    color: rgb(245, 243, 241);
+    background-color: var(--game-board-background);
+    color: var(--game-board-value-text-colour);
     width: fit-content;
     margin: 0 auto;
     padding: 5px;
